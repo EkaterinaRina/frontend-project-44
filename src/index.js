@@ -1,6 +1,11 @@
 import readlineSync from 'readline-sync';
-import { nameUser } from './cli.js';
 import { taskGame, startGame, answer } from './games/even.js';
+
+let nameUser;
+export const getName = () => {
+  nameUser = readlineSync.question('May I have your name? ');
+  console.log('Hello, ' + nameUser + '!');
+};
 
 export const getGame = () => {
   console.log(taskGame);
@@ -14,9 +19,11 @@ export const getGame = () => {
     } else {
       result =
         "'" +
-        answer +
+        answerUser +
         "'" +
-        " is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, " +
+        " is wrong answer ;(. Correct answer was '" +
+        answer +
+        "'.\nLet's try again, " +
         nameUser +
         '!';
       console.log(result);
