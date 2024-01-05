@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@hexlet/pairs": "^1.1.1",
     "mkdirp": "^3.0.1",
     "readline-sync": "^1.4.10"
   },

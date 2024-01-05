@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { taskGame, startGame, answer } from './games/even.js';
 
 let nameUser;
 export const getName = () => {
@@ -8,11 +7,12 @@ export const getName = () => {
   console.log('Hello, ' + nameUser + '!');
 };
 
-export const getGame = () => {
+export const getGame = (taskGame, startGame) => {
   console.log(taskGame);
   let i = 0;
   while (i < 3) {
-    startGame();
+    const [answer, question] = startGame();
+    console.log('Question: ' + question);
     const answerUser = readlineSync.question('Your answer: ');
     let result;
     if (answerUser === answer) {
