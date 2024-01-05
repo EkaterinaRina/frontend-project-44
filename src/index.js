@@ -3,6 +3,7 @@ import { taskGame, startGame, answer } from './games/even.js';
 
 let nameUser;
 export const getName = () => {
+  console.log('Welcome to the Brain Games!');
   nameUser = readlineSync.question('May I have your name? ');
   console.log('Hello, ' + nameUser + '!');
 };
