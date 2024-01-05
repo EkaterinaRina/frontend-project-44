@@ -1,16 +1,32 @@
-import { getRandomNumber } from "../random";
+import { getRandomNumber } from '../random.js';
+import { getGame, getName } from '../index.js';
 
 const taskGame = 'What is the result of the expression?';
 
-
-
-let answer;
 const startGame = () => {
-    const firstNumber = getRandomNumber(1, 101);
-    const secondNumber = getRandomNumber(1, 101);
-
-    console.log('Question: ' + randomNumber);
-    answer = isEven(randomNumber) ? 'yes' : 'no';
+  const firstNumber = getRandomNumber(1, 100);
+  const secondNumber = getRandomNumber(1, 100);
+  const symbols = ['+', '-', '*'];
+  const randomIndex = getRandomNumber(0, 2);
+  const randomSymbol = symbols[randomIndex];
+  const question = firstNumber + ' ' + randomSymbol + ' ' + secondNumber;
+  let result;
+  switch (randomSymbol) {
+    case '+':
+      result = firstNumber + secondNumber;
+      break;
+    case '-':
+      result = firstNumber - secondNumber;
+      break;
+    case '*':
+      result = firstNumber * secondNumber;
+      break;
+  }
+  const answer = result.toString();
+  return [answer, question];
 };
 
-export { startGame, taskGame };
+export default () => {
+  getName();
+  getGame(taskGame, startGame);
+};
