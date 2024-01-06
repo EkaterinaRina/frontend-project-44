@@ -18,13 +18,13 @@ npm link
 **Brain-gcd** Определение наибольшего общего делителя.  
 **Brain-prime** Определение простого числа.  
 
-####brain-even  
+#### brain-even  
 <a href="https://asciinema.org/a/0WRhxumtkLz9SLikdifOUgmmp" target="_blank"><img src="https://asciinema.org/a/0WRhxumtkLz9SLikdifOUgmmp.svg" /></a>    
-####brain-calc  
+#### brain-calc  
 <a href="https://asciinema.org/a/9uDD7pyUcf8AvuIB2pFCewEd8" target="_blank"><img src="https://asciinema.org/a/9uDD7pyUcf8AvuIB2pFCewEd8.svg" /></a>    
-####brain-gcd  
+#### brain-gcd  
 <a href="https://asciinema.org/a/KLm6Ikz7vrXSg71uUFstz8U1x" target="_blank"><img src="https://asciinema.org/a/KLm6Ikz7vrXSg71uUFstz8U1x.svg" /></a>    
-####brain-progression  
+#### brain-progression  
 <a href="https://asciinema.org/a/FEuNElvLPltDx6gijI5uUKtOx" target="_blank"><img src="https://asciinema.org/a/FEuNElvLPltDx6gijI5uUKtOx.svg" /></a>  
-####brain-prime  
+#### brain-prime  
 <a href="https://asciinema.org/a/xlia8O2lOdyfgFqf60nwIxgqB" target="_blank"><img src="https://asciinema.org/a/xlia8O2lOdyfgFqf60nwIxgqB.svg" /></a>   
