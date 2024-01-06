@@ -9,7 +9,7 @@ const startGame = () => {
   const symbols = ['+', '-', '*'];
   const randomIndex = getRandomNumber(0, 2);
   const randomSymbol = symbols[randomIndex];
-  const question = firstNumber + ' ' + randomSymbol + ' ' + secondNumber;
+  const question = `${firstNumber} ${randomSymbol} ${secondNumber}`;
   let result;
   switch (randomSymbol) {
     case '+':
@@ -18,7 +18,7 @@ const startGame = () => {
     case '-':
       result = firstNumber - secondNumber;
       break;
-    case '*':
+    default:
       result = firstNumber * secondNumber;
       break;
   }
