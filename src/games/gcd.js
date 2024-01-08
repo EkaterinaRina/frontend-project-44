@@ -1,25 +1,29 @@
 import getRandomNumber from '../random.js';
-import { getGame, getName } from '../index.js';
+import { getGame } from '../index.js';
 
 const taskGame = 'Find the greatest common divisor of given numbers.';
+
+const gcd = (numberOne, numberTwo) => {
+  const stack = [];
+  let divisor = 1;
+  while (divisor <= numberOne && divisor <= numberTwo) {
+    if (numberOne % divisor === 0 && numberTwo % divisor === 0) {
+      stack.push(divisor);
+    }
+    divisor += 1;
+  }
+  return stack.pop();
+};
 
 const startGame = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
   const question = `${firstNumber} ${secondNumber}`;
-  const stack = [];
-  let divisor = 1;
-  while (divisor <= firstNumber && divisor <= secondNumber) {
-    if (firstNumber % divisor === 0 && secondNumber % divisor === 0) {
-      stack.push(divisor);
-    }
-    divisor += 1;
-  }
-  const answer = stack.pop().toString();
+  const result = gcd(firstNumber, secondNumber);
+  const answer = result.toString();
   return [answer, question];
 };
 
 export default () => {
-  getName();
   getGame(taskGame, startGame);
 };
