@@ -3,6 +3,8 @@ import getGame from '../index.js';
 
 const taskGame = 'What is the result of the expression?';
 
+const symbols = ['+', '-', '*'];
+
 const calculate = (numberOne, numberTwo, symbol) => {
   switch (symbol) {
     case '+':
@@ -19,7 +21,6 @@ const calculate = (numberOne, numberTwo, symbol) => {
 const startGame = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
-  const symbols = ['+', '-', '*'];
   const randomIndex = getRandomNumber(0, symbols.length - 1);
   const randomSymbol = symbols[randomIndex];
   const question = `${firstNumber} ${randomSymbol} ${secondNumber}`;
