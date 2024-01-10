@@ -28,4 +28,4 @@ const startGame = () => {
   return [answer, question];
 };
 
-export default () => { getGame(taskGame, startGame); };
+export { getGame, taskGame, startGame };
